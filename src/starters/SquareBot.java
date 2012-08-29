@@ -23,15 +23,16 @@ public class SquareBot
       LCD.drawString("GO",0,0);
       Button.waitForAnyPress();
       SquareBot robot = new SquareBot();
-      Motor.A.setSpeed(300);
+      Motor.A.setSpeed(100);
       Motor.A.setAcceleration(3000);
-      Motor.C.setSpeed(300);
+      Motor.C.setSpeed(100);
       Motor.C.setAcceleration(3000);
       int direction = 1;
       Button.waitForAnyPress();
       for(int i = 0 ;i< 2; i++)
       {
         robot.square(60,direction);
+        direction*=-1;
      /// more code here
       }
     }
@@ -42,14 +43,17 @@ public class SquareBot
      */
     public void square(float length,int direction)
     {
-    	DifferentialPilot pilot = new DifferentialPilot(5.6f, 11.0f, Motor.A, Motor.C);
-    	for (int i = 0; i<4; i++){
+    	DifferentialPilot pilot = new DifferentialPilot(wheelDiameter, trackWidth, Motor.A, Motor.C);
+    	pilot.setRotateSpeed(180);
+        pilot.setAcceleration(3000);
+    	for (int i = 0; i<8; i++){
     		pilot.travel(60.96);
-    		pilot.rotate(90);
+    		pilot.rotate(90*direction);
     	}
+    	pilot.rotate(90);
     }
    
     //  instance variables -- check these values for your robot
-      float wheelDiameter =  5.35f;
-      float trackWidth = 11.7f;
+      float wheelDiameter =  5.6f;
+      float trackWidth = 11.4f;
 }

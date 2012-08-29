@@ -17,12 +17,11 @@ public class TrackWidthTest
    */
   public static void main(String[] args)
   {
-    DifferentialPilot pilot = new DifferentialPilot(5.35f, 11.0f, Motor.A, Motor.C);
+    DifferentialPilot pilot = new DifferentialPilot(5.6f, 12.5f, Motor.A, Motor.C);
     pilot.setRotateSpeed(180);
     pilot.setAcceleration(60);
     Button.waitForAnyPress();
     Delay.msDelay(200);
-	pilot.rotate(360);
-	pilot.
+	pilot.rotate(-90);
   }
 }
