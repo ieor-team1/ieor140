@@ -20,8 +20,14 @@ public class PolyTest_starter
     public static void main(String[] aArg) 
     {
       DifferentialPilot pilot = new DifferentialPilot(5.35f, 13.7f, Motor.A, Motor.C);
-      PolyTracer robot = new PolyTracer(pilot);   
-      robot.polygon(____________);
-      robot.arc(_________________);
+      PolyTracer robot = new PolyTracer(pilot);
+      Button.waitForAnyPress();
+      robot.polygon(60.96f,3,1);
+      Button.waitForAnyPress();
+      robot.polygon(60.96f,5,-1);
+      Button.waitForAnyPress();
+      robot.arc(91.44f,180,1);
+      Button.waitForAnyPress();
+      robot.arc(30.48f,90,-1);
     }  
 }

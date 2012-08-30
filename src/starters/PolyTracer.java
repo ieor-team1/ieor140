@@ -27,7 +27,9 @@ public PolyTracer(DifferentialPilot pilot)
  */
   public void arc(float radius,  float  angle, int turnDirection)
   {
-    // your code here
+	  pilot = new DifferentialPilot(wheelDiameter, trackWidth, Motor.A, Motor.C);
+	  Button.waitForAnyPress();
+	  pilot.arc(turnDirection*radius, angle);
   }
 
 /**
@@ -40,8 +42,17 @@ public PolyTracer(DifferentialPilot pilot)
   {
     LCD.drawString("Polygon", 0, 0);
     Button.waitForAnyPress();
-    // your code here
+    DifferentialPilot pilot = new DifferentialPilot(wheelDiameter, trackWidth, Motor.A, Motor.C);
+	pilot.setRotateSpeed(180);
+    pilot.setAcceleration(3000);
+    double angle = (sides-2)*180/sides;
+    for (int i = 0; i<sides; i++){
+		pilot.travel(length);
+		pilot.rotate(turnDirection*angle);
+	}
     
   }
  DifferentialPilot pilot;
+ float wheelDiameter =  5.6f;
+ float trackWidth = 11.4f;
 }
