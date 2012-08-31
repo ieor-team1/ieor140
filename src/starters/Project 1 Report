@@ -1,0 +1,28 @@
+
+Project 1 Report.
+
+by: Krishna Kalpathy, Almudena Sanz Olive, Browly Do
+
+The aim of the project was building and programming the robot so it could trace different shapes, such as squares and other polygons, and arcs.
+
+1.What was the most difficult part of the project?
+
+The most difficult part was adjusting the rotation for the motors without the Differential Pilot. And also realizing that there may be a problem with the hardware configuration of the robot, and the wheels were not well fixed to the chassis.
+
+2.What was the most interesting?
+
+Realizing that the configuration of the robot affected so much to the performance of the robot. We focused on changing the code to avoid the error that the robot made, but we could not find the problem. At the end the code was right, and the wheels tilting was what changed the expected performance of the robot.
+
+3.What is the approximate error in distance and angle per circuit around the square?
+
+Approximate error in distance was 6 inches, but could have been fixed by decreasing the amount of rotations the motor was told to go. The angle error was about 2 degrees, and it accumulated every time the robot turned. When the robot completed a full square the outline of the square seems to have rotated about 15 degrees.
+
+4.What are the most significant sources of uncertainty and variability that contribute to this error?
+
+Since only an integer is accepted in the command, it was difficult to increase the accuracy. Also, the amount of power being sent to each motor was unknown; in the beginning the wheels wouldn’t start at the same time. Or, too much power was delivered to one wheel and would cause a jerk, skidding the whole robot off the straight line. 
+
+5.Link to your code
+
+https://github.com/kkalpathy/ieor140.git
+
+
