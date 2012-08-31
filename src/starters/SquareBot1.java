@@ -27,7 +27,7 @@ public class SquareBot1
     {
       LCD.drawString("GO",0,0);
       Button.waitForAnyPress();
-      SquareBot1 robot = new SquareBot1();
+      SquareBot1 robot = new SquareBot1(pilot);
       
     
       int direction = 1;
@@ -52,7 +52,7 @@ public class SquareBot1
       }
     }
     
-      DifferentialPilot pilot;
+      static DifferentialPilot pilot;
     //  instance variables -- check these values for your robot
 	// adjust wheelDiameter first - to travel 90 cm
       float wheelDiameter =  5.35f;
